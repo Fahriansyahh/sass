@@ -1,0 +1,11 @@
+// pengunaan mixin
+//! ketika make use beritahu dulu scss ini akan mengarah kemana lewat cmd 
+//! dalam kasus ini sass sass/style.scss css/style.css
+@use 'module/container1';
+@use 'module/container2';
+@use 'module/container3';
+
+body {
+    margin: 0;
+    padding: 0;
+}

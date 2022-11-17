@@ -1,0 +1,8 @@
+//! pengunaan modules tipe import 
+@import 'mixin/mixin';
+@import 'mixin/container1', 'mixin/container2', 'mixin/container3';
+
+body {
+    margin: 0;
+    padding: 0;
+}

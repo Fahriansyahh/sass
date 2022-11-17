@@ -1,0 +1,108 @@
+// pengunaan mixin
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin container {
+    display: inline-block;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    list-style: none;
+}
+
+.container1 {
+    background-color: salmon;
+    width: 100%;
+    opacity: 0.8;
+
+    ul {
+        padding: 20px;
+
+        li {
+            background-color: rgb(8, 252, 240);
+            padding: 5px;
+            border-radius: 10px;
+            margin: 4px;
+            opacity: 0.7;
+            @include container();
+
+            a {
+                text-decoration: none;
+                color: rgb(250, 247, 247);
+            }
+        }
+    }
+}
+
+//!container
+@mixin article($color: aliceblue) {
+    color: $color;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: oblique;
+}
+
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .article1 {
+        background-color: blue;
+
+        ul {
+            list-style: none;
+            padding: 20px;
+
+            li {
+                background-color: rgb(102, 255, 0);
+                font-size: 40px;
+                margin: 10px;
+                text-align: center;
+                font-style: italic;
+                border-radius: 10px;
+                @include article(salmon)
+            }
+        }
+
+    }
+
+    .article2 {
+        background-color: aliceblue;
+        padding: 20px;
+        height: fit-content;
+        margin: 5px;
+        @include article(blue)
+    }
+
+}
+
+
+//! container 3
+.container3 {
+    background-color: rgb(8, 252, 240);
+    width: 100%;
+    opacity: 0.8;
+    text-align: center;
+
+    ul {
+        padding: 20px;
+
+        li {
+            background-color: salmon;
+            padding: 5px;
+            border-radius: 10px;
+            margin: 10px;
+            opacity: 0.7;
+            @include container();
+
+            a {
+                text-decoration: none;
+                color: rgb(250, 247, 247);
+            }
+        }
+    }
+}

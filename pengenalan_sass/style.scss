@@ -1,0 +1,60 @@
+$myFam: helvetica;
+$fontSzh1: 40px;
+
+body {
+    margin: 0;
+    padding: 0;
+
+    header {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        .container {
+            padding: 3px 0px;
+            background-color: rgb(168, 224, 242);
+            border-bottom: 3px solid black;
+
+            h1 {
+                font-style: italic;
+                color: rebeccapurple;
+                font-family: $myFam;
+                text-align: right;
+                margin-right: 100px;
+                font-size: $fontSzh1 ;
+                text-decoration: underline;
+                text-shadow: -2px -3px 2px aliceblue;
+            }
+        }
+    }
+
+    .container1 {
+        background-color: whitesmoke;
+        margin-top: 30px;
+        padding: 100px;
+
+        .list {
+            width: 80%;
+            background-color: salmon;
+            margin: auto;
+            padding: 40px;
+            box-shadow: 8px 8px 20px, -8px -8px 20px;
+
+            h1 {
+                font-family: $myFam;
+                font-size: $fontSzh1;
+                text-decoration: underline;
+            }
+
+            ul {
+                margin: 0px 80px;
+                text-align: left;
+
+                li {
+                    font-size: 45px;
+                    font-family: $myFam;
+                }
+            }
+        }
+    }
+}

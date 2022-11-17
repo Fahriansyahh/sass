@@ -1,0 +1,37 @@
+//!container
+
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .article1 {
+        background-color: blue;
+
+        ul {
+            list-style: none;
+            padding: 20px;
+
+            li {
+                background-color: rgb(102, 255, 0);
+                font-size: 40px;
+                margin: 10px;
+                text-align: center;
+                font-style: italic;
+                border-radius: 10px;
+                @include article(salmon)
+            }
+        }
+
+    }
+
+    .article2 {
+        background-color: aliceblue;
+        padding: 20px;
+        height: fit-content;
+        margin: 5px;
+        @include article(blue)
+    }
+
+}

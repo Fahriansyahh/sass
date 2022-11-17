@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+body header .container {
+  padding: 3px 0px;
+  background-color: rgb(168, 224, 242);
+  border-bottom: 3px solid black;
+}
+body header .container h1 {
+  font-style: italic;
+  color: rebeccapurple;
+  font-family: helvetica;
+  text-align: right;
+  margin-right: 100px;
+  font-size: 40px;
+  text-decoration: underline;
+  text-shadow: -2px -3px 2px aliceblue;
+}
+body .container1 {
+  background-color: whitesmoke;
+  margin-top: 30px;
+  padding: 100px;
+}
+body .container1 .list {
+  width: 80%;
+  background-color: salmon;
+  margin: auto;
+  padding: 40px;
+  box-shadow: 8px 8px 20px, -8px -8px 20px;
+}
+body .container1 .list h1 {
+  font-family: helvetica;
+  font-size: 40px;
+  text-decoration: underline;
+}
+body .container1 .list ul {
+  margin: 0px 80px;
+  text-align: left;
+}
+body .container1 .list ul li {
+  font-size: 45px;
+  font-family: helvetica;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,92 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --my-colorh1: red;
+  --my-colorP: green;
+  --fontSizeh1: 40px;
+  --fontSizeP: 20px;
+  --backGroundColor: oldlace;
+}
+
+.container {
+  background-color: var(--backGroundColor);
+  padding: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+.container h1 {
+  color: var(--my-colorh1);
+  font-size: var(--fontSizeh1);
+}
+.container p {
+  color: var(--fontSizeP);
+  font-size: var(--fontSizeP);
+}
+
+.container2 {
+  background-color: rgb(154, 147, 147);
+  padding: 20px;
+  margin-top: 6px;
+  border: 2px solid black;
+}
+.container2 h1 {
+  color: blue;
+}
+.container2 p {
+  color: green;
+  font-size: 17px;
+}
+
+h6 {
+  color: red;
+  font-size: 17px;
+}
+
+.container3 {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: blue;
+}
+.container3 h1 {
+  font-size: var(--fontSizeh1);
+  color: white;
+}
+.container3 p {
+  color: green;
+}
+
+.article2 {
+  background-color: darkgrey;
+  padding: 20px;
+}
+.article2 .container {
+  margin: 20px;
+  border: 1px solid black;
+}
+.article2 li {
+  font-size: 17px;
+}
+.article2 li h1 {
+  color: darkkhaki;
+  text-align: end;
+}
+.article2 li h2 {
+  color: red;
+  font-size: 35px;
+}
+.article2 li h3 {
+  color: blue;
+  text-align: center;
+  font-size: 30px;
+}
+.article2 li h4 {
+  color: rgb(9, 242, 242);
+  margin-left: 70%;
+  font-size: 40px;
+}
+.article2 li h5 {
+  color: red;
+  margin-left: 30%;
+}/*# sourceMappingURL=main.css.map */

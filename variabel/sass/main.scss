@@ -1,0 +1,139 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --my-colorh1: red;
+    --my-colorP: green;
+    --fontSizeh1: 40px;
+    --fontSizeP: 20px;
+    --backGroundColor: oldlace;
+}
+
+//pengunaan mengunakan root
+
+.container {
+    background-color: var(--backGroundColor);
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+    & h1 {
+        color: var(--my-colorh1);
+        font-size: var(--fontSizeh1);
+    }
+
+    & p {
+        color: var(--fontSizeP);
+        font-size: var(--fontSizeP);
+
+    }
+}
+
+//!pengunaan mengunakan scope global dan non global
+//? varibel terbagi menjadi dua bagian yaitu global dan local
+//! ( A ) dibawah ini adalah contoh varibel global
+$Colorh1: blue;
+$ColorP: red;
+$Background: rgb(154, 147, 147);
+
+.container2 {
+    background-color: $Background;
+    padding: 20px;
+    margin-top: 6px;
+    border: 2px solid black;
+    //?jika coloeP sama dengan global scope maka ini lah yang di pilih
+    $ColorP: green;
+
+    & h1 {
+        color: $Colorh1;
+    }
+
+    & p {
+        color: $ColorP;
+        font-size: 17px;
+    }
+}
+
+//!tetapi jika colorP diluar lingkup {} ini maka itu tidak di itung sebagai local scope walaupun di html termasuk di dalam lingkup element
+
+//?contoh kasus
+h6 {
+    //! dia akan memilih warna red yang ada pada global bukan green yang pada local
+    color: $ColorP;
+    font-size: 17px;
+}
+
+
+//! PEMBUATAN MAP INI ADALAH PEMBUATAN YANG IDEAL DAN KOMPLEKS MENURUT PENGLIHATAN SAYA DI EPS INI RI
+
+//? cara membuat map
+
+$Color: (
+    //!PENULISAN MAP BUKAN MENGUNAKAN ; INI TAPI , INI
+    'red':red,
+    'blue':blue,
+    'green':green,
+    'white':white,
+    'size':17px,
+); //! dan akhiri dengan titik koma
+
+.container3 {
+    margin-top: 10px;
+    padding: 20px;
+    //! disini memungkinkan kita untuk memangil secara berbeda beda macam
+    background-color: map-get($Color, "blue");
+
+    & h1 {
+        font-size: var(--fontSizeh1);
+        color: map-get($Color, "white");
+    }
+
+    & p {
+        color: map-get($Color, "green");
+    }
+
+}
+
+//! TEST
+.article2 {
+    background-color: darkgrey;
+    padding: 20px;
+
+    & .container {
+        margin: 20px;
+        border: 1px solid black;
+    }
+
+    & li {
+        font-size: map-get($Color , "size");
+    }
+
+    & li h1 {
+        color: darkkhaki;
+        text-align: end;
+    }
+
+    & li h2 {
+        color: map-get($Color, "red");
+        font-size: 35px;
+    }
+
+    & li h3 {
+        color: map-get($Color , 'blue');
+        text-align: center;
+        font-size: 30px;
+    }
+
+    & li h4 {
+        color: rgb(9, 242, 242);
+        margin-left: 70%;
+        font-size: 40px;
+    }
+
+    & li h5 {
+        color: map-get($Color , 'red');
+        margin-left: 30%;
+    }
+
+}
